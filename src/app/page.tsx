@@ -1,15 +1,11 @@
 "use client";
-import PrimaryButton from "@/components/primary-button/primary-button.component";
+
+import BannerSlider from "./layout/banner-slider/banner-slider";
 
 export default function Home() {
   return (
-    <main className="flex items-center justify-center h-screen w-screen">
-      <div className="h-5 w-60">
-        <PrimaryButton
-          buttonText={"OnePedia is the best!!!!"}
-          handleClick={() => alert("Show time!!")}
-        />
-      </div>
+    <main className="h-screen w-screen flex items-center justify-center flex-col">
+      <BannerSlider />
     </main>
   );
 }
