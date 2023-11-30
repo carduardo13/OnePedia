@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Pirata_One } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const pirate = Pirata_One({ weight: "400", preload: false });
+const pirate = Inter({ weight: "400", preload: false });
 
 export const metadata: Metadata = {
   title: "Create Next App",

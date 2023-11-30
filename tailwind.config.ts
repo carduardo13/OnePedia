@@ -6,7 +6,14 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  theme: {},
+  theme: {
+    colors: {
+      luffyColor: "#ff4400b2",
+      namiColor: "#ffa600ad",
+      white: "#ffff",
+      black:"#000"
+    },
+  },
   plugins: [require("tailwindcss-animated")],
 };
 export default config;
