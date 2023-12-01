@@ -1,12 +1,7 @@
 import Image from "next/image";
 import React, { useState, useCallback, useMemo } from "react";
-import { IBannerItem, TColorClasses } from "./banner-item.types";
-
-const colorClasses: TColorClasses = {
-  luffyColor: "bg-luffyColor",
-  namiColor: "bg-namiColor",
-  // Adicione mais cores conforme necessário
-};
+import { colorClasses } from "../../data/slider-data";
+import { IBannerItem } from "../../banner-slider.types";
 
 function BannerItem({ color, imageUrl, namePirate }: IBannerItem) {
   const [isHover, setIsHover] = useState<boolean>(false);
@@ -35,7 +30,7 @@ function BannerItem({ color, imageUrl, namePirate }: IBannerItem) {
         sm:flex-row
         items-center 
         sm:justify-around 
-        rounded-lg
+        md:rounded-lg
         `}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -57,9 +52,9 @@ function BannerItem({ color, imageUrl, namePirate }: IBannerItem) {
         <Image
           alt="luffy-pic"
           src={imageUrl}
-          width={400}
-          height={400}
-          className="animate-fade-up animate-delay-[200ms] animate-ease-in-out w-[350px] h-[350px]"
+          width={350}
+          height={350}
+          className="animate-fade-up animate-delay-[200ms] animate-ease-in-out w-[300px] h-[300px]"
         />
       </div>
     </div>
