@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { useState, useCallback, useMemo } from "react";
-import { IBannerItem } from "./banner-item.types";
 import { colorClasses } from "../../data/slider-data";
+import { IBannerItem } from "../../banner-slider.types";
 
 function BannerItem({ color, imageUrl, namePirate }: IBannerItem) {
   const [isHover, setIsHover] = useState<boolean>(false);

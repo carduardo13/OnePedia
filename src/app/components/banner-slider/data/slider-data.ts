@@ -1,4 +1,4 @@
-import { TColorClasses } from "../components/banner-item/banner-item.types";
+import { TColorClasses } from "../banner-slider.types";
 
 export const sliderData = [
   {
