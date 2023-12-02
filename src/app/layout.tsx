@@ -15,7 +15,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className="h-screen w-screen flex items-center justify-center flex-col"
+    >
       <body className={pirate.className}>{children}</body>
     </html>
   );

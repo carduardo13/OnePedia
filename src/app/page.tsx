@@ -2,7 +2,6 @@ import { prisma } from "@/lib/db/prisma";
 import BannerSlider from "./components/banner-slider/banner-slider";
 
 export default async function Home() {
-  
   const pirates = await prisma.pirate.findMany({
     orderBy: {
       id: "asc",
@@ -10,7 +9,7 @@ export default async function Home() {
   });
 
   return (
-    <main className="h-screen w-screen flex items-center justify-center flex-col">
+    <main>
       <BannerSlider bannerData={pirates} />
     </main>
   );
