@@ -1,7 +1,8 @@
+"use client";
 import Image from "next/image";
 import React, { useState, useCallback, useMemo } from "react";
 import { colorClasses } from "../../data/slider-data";
-import { IBannerItem } from "../../banner-slider.types";
+import { IBannerItem } from "./banner-item.types";
 
 function BannerItem({ color, imageUrl, namePirate }: IBannerItem) {
   const [isHover, setIsHover] = useState<boolean>(false);

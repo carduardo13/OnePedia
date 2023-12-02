@@ -1,12 +1,7 @@
+"use client";
 import React from "react";
-import { IBannerItem } from "../../banner-slider.types";
 import { colorClasses } from "../../data/slider-data";
-
-interface IBannerDots {
-  sliderData: IBannerItem[];
-  currentIndex: number;
-  handleSetIndex: (index: number) => void;
-}
+import { IBannerDots } from "./banner-dots.types";
 
 function BnnerDots({ sliderData, currentIndex, handleSetIndex }: IBannerDots) {
   return (
