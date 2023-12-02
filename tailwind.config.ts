@@ -10,8 +10,9 @@ const config: Config = {
     colors: {
       luffyColor: "#ff4400b2",
       namiColor: "#ffa600ad",
+      zoroColor: "#00ff0079",
       white: "#ffff",
-      black:"#000"
+      black: "#000",
     },
   },
   plugins: [require("tailwindcss-animated")],

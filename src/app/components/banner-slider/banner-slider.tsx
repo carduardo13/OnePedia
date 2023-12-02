@@ -1,9 +1,10 @@
+"use client";
 import React, { useCallback } from "react";
 import BannerItem from "./components/banner-item/banner-item.component";
-import { sliderData } from "./data/slider-data";
 import BnnerDots from "./components/banner-dots/banner-dots";
+import { IBannerSlider } from "./banner-slider.types";
 
-function BannerSlider() {
+function BannerSlider({ bannerData }: IBannerSlider) {
   const [currentIndex, setCurrentIndex] = React.useState(0);
 
   const handleSetIndex = useCallback(
@@ -14,12 +15,12 @@ function BannerSlider() {
   );
 
   const handleSlideChange = useCallback(() => {
-    if (currentIndex === sliderData.length - 1) {
+    if (currentIndex === bannerData.length - 1) {
       setCurrentIndex(0);
     } else {
       setCurrentIndex(currentIndex + 1);
     }
-  }, [currentIndex]);
+  }, [currentIndex, bannerData.length]);
 
   React.useEffect(() => {
     const intervalId = setInterval(handleSlideChange, 10000);
@@ -29,7 +30,7 @@ function BannerSlider() {
 
   return (
     <div className="w-screen h-full flex items-center justify-center gap-4 flex-col">
-      {sliderData.map(
+      {bannerData.map(
         (item, index) =>
           index === currentIndex && (
             <BannerItem
@@ -43,7 +44,7 @@ function BannerSlider() {
       <BnnerDots
         currentIndex={currentIndex}
         handleSetIndex={handleSetIndex}
-        sliderData={sliderData}
+        sliderData={bannerData}
       />
     </div>
   );
